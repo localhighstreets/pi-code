@@ -12,6 +12,8 @@
 
 # Pi
 
+This is the `localhighstreets/pi-code` source repository. The installation, release, community and package links below refer to upstream Pi. Installing an upstream npm package or using an upstream installer does not install changes unique to this checkout. LocalHighStreet agent integration is maintained separately in [lhs-agents](https://github.com/localhighstreets/lhs-agents).
+
 Pi is a minimal, extensible agent harness that you can make your own.
 
 Adapt Pi to your workflows, not the other way around. Customize Pi with [extensions](packages/coding-agent/docs/extensions.md), [skills](packages/coding-agent/docs/skills.md), [prompt templates](packages/coding-agent/docs/prompt-templates.md), and [themes](packages/coding-agent/docs/themes.md). Bundle them as [Pi packages](packages/coding-agent/docs/packages.md) and share via npm or git.
@@ -82,6 +84,10 @@ This monorepo contains the Pi CLI and its supporting libraries.
 | **[@earendil-works/pi-agent-core](packages/agent)** | Agent runtime with tool calling and state management |
 | **[@earendil-works/pi-coding-agent](packages/coding-agent)** | Interactive coding agent CLI |
 | **[@earendil-works/pi-tui](packages/tui)** | Terminal UI library with differential rendering |
+| **[@earendil-works/pi-codemode](packages/codemode)** | Sandboxed JavaScript execution where the only capability is calling injected tools |
+| **[@earendil-works/pi-env](packages/env)** | Remote execution environments for Pi Durable: a small daemon deployed over SSH and its ExecutionEnv client |
+| **[@earendil-works/pi-mcp](packages/mcp)** | Standalone Model Context Protocol client for pi and other applications |
+| **[@earendil-works/pi-evals](packages/evals)** | Supporting Pi workspace |
 
 For Slack/chat automation and workflows see [earendil-works/pi-chat](https://github.com/earendil-works/pi-chat).
 
@@ -169,7 +175,7 @@ The archive includes release model data and native prebuilds. `--offline-model-d
 
 We treat npm dependency changes as reviewed code changes.
 
-- Direct external dependencies are pinned to exact versions. Internal workspace packages remain version-ranged.
+- Direct external dependencies are pinned to exact versions. Check each workspace manifest for its internal package versions.
 - `.npmrc` sets `save-exact=true` and `min-release-age=2` to avoid same-day dependency releases during npm resolution.
 - `package-lock.json` is the dependency ground truth. Pre-commit blocks accidental lockfile commits unless `PI_ALLOW_LOCKFILE_CHANGE=1` is set.
 - `npm run check` verifies pinned direct deps, native TypeScript import compatibility, and the generated coding-agent install lock.
@@ -194,6 +200,10 @@ You can also watch [this video](https://x.com/badlogicgames/status/2041151967695
 I regularly publish my own `pi-mono` work sessions here:
 
 - [badlogicgames/pi-mono on Hugging Face](https://huggingface.co/datasets/badlogicgames/pi-mono)
+
+## Local source verification
+
+The repository paths, root scripts and workspace inventory were reviewed on 21 October 2026. Upstream badges and release descriptions are not CI or deployment evidence for this LocalHighStreet checkout. Builds and tests were not executed during this README review.
 
 ## License
 
