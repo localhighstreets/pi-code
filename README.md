@@ -22,6 +22,33 @@ Pi ships with powerful defaults but skips features like sub-agents and plan mode
 
 Use Pi [interactively](packages/coding-agent/docs/usage.md), automate it in [print or JSON mode](packages/coding-agent/docs/cli.md), control it over [RPC](packages/coding-agent/docs/rpc.md), or build apps with the [Pi TypeScript SDK](packages/coding-agent/docs/sdk.md). See [OpenClaw](https://github.com/OpenClaw/OpenClaw) for a real-world integration.
 
+## Completion and remaining work
+
+Snapshot: **21 October 2026**.
+
+| Measure | Status |
+|---|---|
+| Overall feature/release completion | **Not yet measurable** — no reconciled, acceptance-tested repository-wide baseline was established in this review |
+| Tracked-work completion | **N/A** — no eligible GitHub issues in this repository |
+| Open tracked work | 0 issues |
+| Excluded closures | 0 cancelled/not-planned or unclassified closures |
+
+The tracked percentage is `completed / (completed + open) × 100`, rounded to one decimal place. It counts repository GitHub issues equally; PRs and closures not marked `completed` are excluded. It is **not** a feature-completeness, effort, test-coverage or production-readiness percentage. Jira work, untracked requirements and upstream-project issues are outside this denominator. An empty tracker means unknown scope, not 100% completion.
+
+### Remaining work and acceptance evidence
+
+The following items identify implementation decisions, tracker reconciliation or validation still needed to establish completion; they are not all newly verified code defects.
+
+- Define this fork's role, supported differences and acceptance scope alongside `localhighstreets/pi`.
+- Verify this checkout's workspace checks and intended package/installer consumption.
+- Record any LHS integration requirements in the owning [lhs-agents repository](https://github.com/localhighstreets/lhs-agents), rather than inferring deployment from upstream release links.
+
+### Tracked backlog
+
+No open GitHub issues were returned for this repository at the snapshot date. Establish an owner-approved scope and acceptance checklist before assigning an overall percentage.
+
+[Review the current issue tracker](https://github.com/localhighstreets/pi-code/issues?q=is%3Aissue). Reconcile old package scopes, route assumptions and duplicate/superseded tickets against current code before acting on them. Update this dated numerator/denominator and remaining-work list after acceptance changes.
+
 ## Getting started
 
 Install the command-line interface:
